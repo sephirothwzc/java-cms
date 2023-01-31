@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Jun 19 13:59:36 CST 2022
+http\://60.28.189.111\:8203/nexus/content/groups/public/.error=Could not transfer artifact xml-resolver\:xml-resolver\:jar\:1.2 from/to central.m2 (http\://60.28.189.111\:8203/nexus/content/groups/public/)\: Connect to 60.28.189.111\:8203 [/60.28.189.111] failed\: Operation timed out (Connection timed out)
+http\://maven.aliyun.com/nexus/content/repositories/central/.lastUpdated=1655618376830
+@default-central.m2-http\://60.28.189.111\:8203/nexus/content/groups/public/.lastUpdated=1655618368717

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>/Users/wuzhanchao/Documents/我的项目/longi/source/cms-back-phaseiii/libs</localRepository>
+  <servers>
+    <server>
+      <id>huiju-nexus2</id>
+      <username>huiju3</username>
+      <password>huiju3</password>
+    </server>
+    <server>
+      <!--maven发布库的id-->
+      <id>releases</id>
+      <username>huiju3</username>
+      <password>huiju3</password>
+    </server>
+    <server>
+      <!--maven快照库的id-->
+      <id>snapshots</id>
+      <username>huiju3</username>
+      <password>huiju3</password>
+    </server>
+  </servers>
+
+
+  <mirrors>
+    <mirror>
+      <id>central.m2</id>
+      <name>one of the central mirrors</name>
+      <url>http://60.28.189.111:8203/nexus/content/groups/public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+
+    <mirror>
+      <id>alimaven</id>
+      <mirrorOf>central</mirrorOf>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>huiju2</id>
+      <repositories>
+        <repository>
+          <id>public</id>
+          <name>Public Repositories</name>
+          <url>http://60.28.189.111:8203/nexus/content/groups/public/</url>
+          <layout>default</layout>
+          <snapshots>
+            <checksumPolicy>fail</checksumPolicy>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+          <releases>
+            <checksumPolicy>fail</checksumPolicy>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </releases>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>public</id>
+          <name>Public Repositories</name>
+          <url>http://60.28.189.111:8203/nexus/content/groups/public/</url>
+          <layout>default</layout>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>huiju2</activeProfile>
+  </activeProfiles>
+</settings>
